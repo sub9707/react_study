@@ -2,7 +2,7 @@
 본 학습 내용은 Next.js의 새 버전 13 beta를 토대로 기존 버전과 다른 내용을 공부하여 기록하였습니다.<br/>
 <strong>참고 Docs</strong> <br/> 
 <a href="https://nextjs.org/docs">Next js : https://nextjs.org/docs</a> <br/>
-<a href="beta.nextjs.org/docs">Next js beta: beta.nextjs.org/docs</a>
+<a href="https://beta.nextjs.org/docs">Next js beta: https://beta.nextjs.org/docs</a>
 
 
 ## Page Routing
@@ -52,4 +52,10 @@ JSON 객체가 아닌 다른 data를 리턴하고 싶다면, <br/>
 ```
 return new Response(data)
 ```
-를 활용하면 된다.
+를 활용하면 된다. <br/>
+
+이 후 url 입력창에 get 메서드를 실행하기 위해 구조대로 "localhost:3000/list"를 입력하면 폴더 내부에 있던  <br/>
+apitest.tsx 파일의 GET 메서드가 호출되면서 페이지에 return 값이 출력된다. <br/>
+(아래는 디렉토리와 파일명이 다른 예시)<br/>
+![image](https://user-images.githubusercontent.com/110171787/232242054-bc80a53e-ca61-42e4-be85-f257ec2e5b07.png)
+
