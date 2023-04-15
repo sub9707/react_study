@@ -26,3 +26,30 @@ localhost:3000/list => root/pages/list
 ex)  src, app 구조 차용 방식
 localhost:3000/list => src/app/list 폴더의 page.tsx 페이지를 렌더링
 ```
+### 2. API Routes
+본래의 방식은 pages에 js 파일을 넣고, url에 따라 api 함수를 호출하여 HTTP 통신을 하였으나,<br/>
+beta 버전에서의 API 라우팅은 조금 변경되었다. <br/>
+우선, app 디렉토리에 api 폴더를 생성하고 pages 처럼 url 구성에 따라 폴더를 만들어 구조를 생성한다.<br/>
+
+app/api/test 구조에 apitest.tsx 파일이 있다고 가정하자. <br/>
+아래처럼 GET/POST 함수를 작성한다. <br/>
+```javascript
+import type { NextApiRequest, NextApiResponse } from "next";
+import { NextResponse } from "next/server";
+
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  console.log("Handling GET request Done!");
+  return NextResponse.json({ msg: "Finally Done..!" });
+}
+export async function POST(req: NextApiRequest, res: NextApiResponse) {
+  // POST 함수 작성
+  return;
+}
+```
+여기서 import 첫 줄은 request와 response의 타입을 지정하기위함이고, <br/>
+NextResponse는 return을 할 때 기존 react와 Next js 프레임워크에서 사용하던 res.status(200)을 대체하는 Method이다. <br/>
+JSON 객체가 아닌 다른 data를 리턴하고 싶다면, <br/>
+```
+return new Response(data)
+```
+를 활용하면 된다.
