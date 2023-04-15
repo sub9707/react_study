@@ -1,7 +1,7 @@
 # Next.js 학습
 본 학습 내용은 Next.js의 새 버전 13 beta를 토대로 기존 버전과 다른 내용을 공부하여 기록하였습니다.<br/>
-참고 Docs <br/> 
-<a href="https://nextjs.org/docs">Next js : https://nextjs.org/docs</a>
+<strong>참고 Docs</strong> <br/> 
+<a href="https://nextjs.org/docs">Next js : https://nextjs.org/docs</a> <br/>
 <a href="beta.nextjs.org/docs">Next js beta: beta.nextjs.org/docs</a>
 
 
